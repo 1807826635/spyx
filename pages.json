@@ -509,7 +509,16 @@
 							"scrollIndicator": false //禁用原生导航栏
 						}
 					}
-				}
+				},
+              {
+                "path": "goods_detail/index",
+                "style": {
+                  "navigationStyle": "custom"
+                  // #ifdef MP
+                ,"navigationBarTextStyle": "#fff"
+                  // #endif
+                }
+              }
 			]
 		},
 		{
