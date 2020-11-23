@@ -99,7 +99,7 @@
 					</view>
 					<view class="slider-banner banner">
 						<swiper indicator-dots="true" :autoplay="autoplay" :circular="circular" :interval="interval" :duration="duration"
-						 indicator-color="#999" indicator-active-color="#4C56AA" :style="'height:'+clientHeight+'px'">
+						 indicator-color="#999" indicator-active-color="#DF828C" :style="'height:'+clientHeight+'px'">
 							<swiper-item v-for="(item,indexw) in good_list" :key="indexw">
 								<view class="list acea-row row-middle" :id="'list'+indexw">
 									<view class="item" v-for="(val,indexn) in item.list" :key="indexn" @click="goDetail(val)">
@@ -1348,7 +1348,7 @@
 
 	.product-con .footer .bnt .buy {
 		border-radius: 0 50rpx 50rpx 0;
-        background: linear-gradient(90deg, #5F51B3 0%, #4B56AA 100%);
+        background: linear-gradient(90deg, #5F51B3 0%, #DF828C 100%);
 	}
 
 	.product-con .store-info {
@@ -1488,7 +1488,7 @@
 	}
 
 	.product-con .superior .slider-banner .swiper-pagination-bullet-active {
-		background-color: #4C56AA;
+		background-color: #DF828C;
 	}
 
 	button {

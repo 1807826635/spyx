@@ -274,7 +274,7 @@
 	.my-account .wrapper .header {
 		width: 690rpx;
 		height: 330rpx;
-		background-image: linear-gradient(to right, #4B56AA 0%, #5F51B3 100%);
+		background-image: linear-gradient(to right, #DF828C 0%, #5F51B3 100%);
 		border-radius: 16rpx;
 		margin: 0 auto;
 		box-sizing: border-box;

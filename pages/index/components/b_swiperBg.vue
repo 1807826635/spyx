@@ -187,7 +187,7 @@
 				}
 
 				/deep/.uni-swiper-dot-active {
-					background: #4B56AA !important;
+					background: #DF828C !important;
 					width: 30rpx !important;
 					border-radius: 5rpx;
 				}

@@ -328,7 +328,7 @@
 		width: 40rpx;
 		height: 40rpx;
 		border-radius: 50%;
-		border: 2rpx solid #4C56AA;
+		border: 2rpx solid #DF828C;
 		text-align: center;
 		line-height: 37rpx;
 		margin: 0 auto 6rpx auto;
@@ -337,9 +337,9 @@
 	}
 
 	.cash-withdrawal .nav .item .iconfont.on {
-		background-color: #4C56AA;
+		background-color: #DF828C;
 		color: #fff;
-		border-color: #4C56AA;
+		border-color: #DF828C;
 	}
 
 	.cash-withdrawal .nav .item .line {

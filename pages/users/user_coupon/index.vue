@@ -129,10 +129,10 @@
 		line-height: 26rpx !important;
 		text-align: center;
 		background: #f3f4ff;
-		border: 1px solid #4B56AA;
+		border: 1px solid #DF828C;
 		border-radius: 15rpx;
 		font-size: 20rpx !important;
-		color: #4B56AA;
+		color: #DF828C;
 		margin-right: 12rpx;
 	}
 	.condition .line-title.gray{

@@ -421,7 +421,7 @@
 				height: 232rpx;
 				margin: 0 auto;
 				padding: 35rpx 28rpx;
-				background: linear-gradient(-45deg, #4B56AA 0%, #5F51B3 100%);
+				background: linear-gradient(-45deg, #DF828C 0%, #5F51B3 100%);
 
 				.icon-shezhi {
 					position: absolute;
@@ -699,14 +699,14 @@
 
 			min-width: 12rpx;
 			background-color: #fff;
-			color: #4b56aa;
+			color: #DF828C;
 			border-radius: 15px;
 			position: absolute;
 			right: -14rpx;
 			top: -15rpx;
 			font-size: 20rpx;
 			padding: 0 8rpx;
-			border: 1px solid #4b56aa;
+			border: 1px solid #DF828C;
 		}
 
 		.support {

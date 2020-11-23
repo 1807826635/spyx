@@ -878,7 +878,7 @@
 
 	.order-submission .allAddress {
 		width: 100%;
-		background: linear-gradient(to bottom, #4C56AA 0%,#f5f5f5 100%);
+		background: linear-gradient(to bottom, #DF828C 0%,#f5f5f5 100%);
 		// background-image: linear-gradient(to bottom, #e93323 0%, #f5f5f5 100%);
 		// background-image: -webkit-linear-gradient(to bottom, #e93323 0%, #f5f5f5 100%);
 		// background-image: -moz-linear-gradient(to bottom, #e93323 0%, #f5f5f5 100%);
@@ -1038,8 +1038,8 @@
 	}
 
 	.order-submission .wrapper .item .list .payItem.on {
-		border-color: #4B56AA;
-		color: #4C56AA;
+		border-color: #DF828C;
+		color: #DF828C;
 	}
 
 	.order-submission .wrapper .item .list .payItem .name {
@@ -1108,7 +1108,7 @@
 		color: #fff;
 		width: 240rpx;
 		height: 70rpx;
-		background-color: #4C56AA;
+		background-color: #DF828C;
 		border-radius: 50rpx;
 		text-align: center;
 		line-height: 70rpx;

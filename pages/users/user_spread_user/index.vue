@@ -223,7 +223,7 @@
 
 	.my-promotion .list .item .iconfont {
 		font-size: 70rpx;
-		background-image: linear-gradient(to right, #4B56AA 0%, #5F51B3 100%);
+		background-image: linear-gradient(to right, #DF828C 0%, #5F51B3 100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		margin-bottom: 20rpx;

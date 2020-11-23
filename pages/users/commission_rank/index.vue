@@ -139,7 +139,7 @@
 	.CommissionRank .header .rank .num {font-size: 51rpx;font-weight: bold;margin: 0 10rpx;}
 	.CommissionRank .wrapper {width: 710rpx;background-color: #fff;border-radius: 20rpx;margin: -76rpx auto 0 auto;}
 	.CommissionRank .wrapper .nav {height: 99rpx;border-bottom: 2.5rpx solid #f3f3f3;font-size: 30rpx;font-weight: bold;color: #999;line-height: 99rpx;}
-	.CommissionRank .wrapper .nav .item.font-color-violet {border-bottom: 4rpx solid #4C56AA;}
+	.CommissionRank .wrapper .nav .item.font-color-violet {border-bottom: 4rpx solid #DF828C;}
 	.CommissionRank .wrapper .list {padding: 0 30rpx;}
 	.CommissionRank .wrapper .list .item {border-bottom: 1px solid #f3f3f3;height: 101rpx;font-size: 28rpx;}
 	.CommissionRank .wrapper .list .item .num {color: #666;width: 70rpx;}

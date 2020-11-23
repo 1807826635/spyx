@@ -260,7 +260,7 @@
 
 	.integral-details .wrapper .nav .item.on {
 		background-color: #fff;
-		color: #4C56AA;
+		color: #DF828C;
 		font-weight: bold;
 		border-radius: 20rpx 0 0 0;
 	}

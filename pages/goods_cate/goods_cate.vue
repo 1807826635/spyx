@@ -176,14 +176,14 @@
 				padding-right: 46rpx;
 
 				&.on {
-					color: #4B56AA;
+					color: #DF828C;
 					font-weight: bold;
 				}
 
 				.line {
 					width: 40rpx;
 					height: 4rpx;
-					background-color: #4B56AA;
+					background-color: #DF828C;
 					margin: 10rpx auto 0 auto;
 				}
 			}

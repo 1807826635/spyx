@@ -217,8 +217,8 @@
 	}
 
 	.promoter-list .nav .item.on {
-		border-bottom: 5rpx solid #4C56AA;
-		color: #4C56AA;
+		border-bottom: 5rpx solid #DF828C;
+		color: #DF828C;
 	}
 
 	.promoter-list .search {

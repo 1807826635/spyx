@@ -217,7 +217,7 @@
 	}
 
 	.flash-sale .timeLsit .item.on .time {
-		color: #4C56AA;
+		color: #DF828C;
 	}
 
 	.flash-sale .timeLsit .item.on .state {

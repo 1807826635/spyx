@@ -182,7 +182,7 @@
 	}
 
 	.return-list .goodWrapper .iconfont.powder {
-		color: #4B56AA;
+		color: #DF828C;
 		opacity: 0.3;
 	}
 </style>

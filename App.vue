@@ -182,7 +182,7 @@
 		box-sizing: border-box;
 	}
 	.bg-color-red {
-	  background-color: #4C56AA!important;
+	  background-color: #DF828C!important;
 	}
 	.syspadding{
 		padding-top: var(--status-bar-height);

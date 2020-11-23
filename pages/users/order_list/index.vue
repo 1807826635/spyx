@@ -427,7 +427,7 @@ export default {
 
 .my-order .nav .item.on {
 	font-weight: bold;
-	border-bottom: 5rpx solid #4C56AA;
+	border-bottom: 5rpx solid #DF828C;
 }
 
 .my-order .nav .item .num {

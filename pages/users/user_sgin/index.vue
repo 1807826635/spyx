@@ -264,5 +264,5 @@
     background-size: 100% 100%;width: 210px;height: 210px;margin-top: -350px;position: relative;}
 	.sign .signTip .signTipCon .state{font-size:34rpx;color:#fff;margin-top:150rpx;}
 	.sign .signTip .signTipCon .integral{font-size:30rpx;color:rgba(255,255,255,0.6);margin-top:9rpx;}
-	.sign .signTip .signTipCon .signTipBnt{font-size:30rpx;color:#4B56AA;width:260rpx;height:76rpx;background-color:#f8d168;border-radius:38rpx;line-height:76rpx;margin:48rpx auto 0 auto;}
+	.sign .signTip .signTipCon .signTipBnt{font-size:30rpx;color:#DF828C;width:260rpx;height:76rpx;background-color:#f8d168;border-radius:38rpx;line-height:76rpx;margin:48rpx auto 0 auto;}
 </style>

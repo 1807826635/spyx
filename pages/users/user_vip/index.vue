@@ -499,7 +499,7 @@
 						color: #FFA508;
 					}
 					.on{
-						color: #4C56AA;
+						color: #DF828C;
 					}
 				}
 			}

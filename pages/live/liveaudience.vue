@@ -7,9 +7,12 @@
 			 
 			 <swiper class="swiper" :circular="true" :vertical="true" @transition="touchSwiper" @change="changeSwiper" :current="currentIndex">
 				 <swiper-item v-for="(ele,idx) in 2" :key="idx">
-					<live-player id="player" :src="initchunk['play_url'][0]" mode="live" :autoplay="currentIndex == idx ? true : false" @statechange="statechange" object-fit="fillCrop"
-											 picture-in-picture-mode="push"
+					 <view class="live-player" :class="screenType=='vertical'?'top0':'top70'">
+					<live-player id="player" :src="initchunk['play_url'][0]" mode="live" :autoplay="currentIndex == idx ? true : false" @statechange="statechange" :object-fit="fitContent"
+              :orientation="screenType"
+					 picture-in-picture-mode="push"
 						 @error="error" />
+					 </view>
 				 </swiper-item>
 			 </swiper>
 			<!-- 顶部信息 -->
@@ -25,10 +28,13 @@
 				<view class="btn" v-else>
 					已关注
 				</view>
+				<view class="zq-small-bell" @click="messagehandle">
+					<image class="icon-car" :src="isrc+'bell.png'" rel="preload"></image>
+				</view>
 			</view>
 
 		</view>
-		<view class="goods" v-if="goods.length>0">
+		<view class="goods transform-y"  :class="goods[0]? 'as-me': ''">
 			<image :src="goods[goods.length-1].image" mode=""></image>
 			<view>
 				<view class="title">{{goods[goods.length-1].store_name}}</view>
@@ -67,6 +73,7 @@
 					</view>
 					<view class="btn-car btn-car2" @click="support">
 						<image class="icon-car" :src="isrc+'zanroom1.png'"></image>
+						<image class="icon-car " v-show="showZan" :src="isrc+'zanroom1.png'"></image>
 					</view>
 					<view class="btn-car btn-car3" @click="logout">
 						<image class="icon-car" :src="isrc+'cancel.png'"></image>
@@ -75,7 +82,8 @@
 			</view>
 		</view>
 		<view v-if="isMsgContent" :style="{bottom:keyboard_height + 'px'}" class="input-section">
-			<input :value="msgContent" :adjustPosition="false" class="txt" :focus="isMsgContent" placeholder="说点什么吧" @focus="focusmsgContentFocus"
+			<input :value="msgContent" :adjustPosition="false" class="txt" :focus="isMsgContent" placeholder="说点什么吧"
+						 @focus="focusmsgContentFocus"
 			 @keyboardheightchange="keyboardHeightChange" @blur="blurmsgContenthandle" @input="msgContenthandle" @confirm="bindConfirm" />
 			<view @click="bindConfirm" class="btn-send" :class="msgContent ? 'btn-sended':''">发送</view>
 		</view>
@@ -152,6 +160,9 @@
 				zanNum: 0,
 				idLists:uni.getStorageSync('idLists'),//直播id列表
 				idIndex:0,//对于id列表当前索引
+        showZan: false,
+        screenType:'vertical',
+        fitContent:'fillCrop' // 竖屏
 			}
 		},
 		filters: {
@@ -169,6 +180,8 @@
 				this.idIndex = idLists.indexOf(Number(options['id']));
 				visitChannel(options['id']).then(res => {
 					console.log('直播详情', res);
+					self.screenType=res.data.screen_type ==0 ?'vertical':'horizontal'
+					self.fitContent=res.data.screen_type ==0 ?'fillCrop':'contain'
 					self.prepareData(res.data);
 				}).catch(err => {
 					uni.showToast({
@@ -228,7 +241,20 @@
 					console.log(res.data.storeInfo)
 					let obj=res.data.storeInfo;
 					obj.imPrice=str1[3];
-					_this.goods.push(obj)
+          this.$nextTick(()=>{
+            _this.goods[0]=obj
+            uni.showToast({
+              icon:'none',
+              title:'推送成功'
+            })
+            setTimeout(()=>{
+              this.goods =[]
+              this.$forceUpdate()
+            },10000)
+            this.$forceUpdate()
+          })
+
+          this.$forceUpdate()
 				})
 			},
 			//上滑或下滑
@@ -403,7 +429,7 @@
 			},
 			blurmsgContenthandle() {
 				this.isMsgContent = false;
-				this.keyboard_height = 0;
+			//	this.keyboard_height = 0;
 			},
 			focusmsgContentFocus(e) {
 				// 输入框获取焦点, 通过软键盘高度设置输入框位置
@@ -428,6 +454,52 @@
 			},
 			statechange(e) {
 				console.log('live-player code:', e.detail.code)
+			},
+      messagehandle(e){
+        var self = this;
+        if (!this.livelistdata.template_id){
+          uni.showToast({
+            title: '未配置订阅模板，请联系管理员',
+            icon: 'none',
+            duration: 2000
+          });
+          return;
+        }
+        uni.requestSubscribeMessage({
+          tmplIds: [this.livelistdata.template_id],
+          success(res) {
+            let channelid = e.currentTarget.dataset['channelid'];
+
+            messagetips(channelid).then(result => {
+              // 获取当前点击下标
+              let Index = e.currentTarget.dataset.index;
+              let list = self.livelistdata.subscribe_list;
+
+              list[Index].is_subscribe = 1;
+              let livelistdata = self.livelistdata;
+              livelistdata.subscribe_list = list;
+              self.livelistdata = livelistdata
+              // console.log(self.livelistdata);
+              uni.showToast({
+                title: result.msg,
+                icon: 'none',
+                duration: 2000
+              });
+            }).catch(err=>{
+              uni.showToast({
+                title: err,
+                icon: 'none',
+              });
+            });
+          },
+          fail(res) {
+            uni.showToast({
+              title: res.errMsg,
+              icon: 'none',
+            });
+            return;
+          }
+        })
 			},
 			error(e) {
 				console.error('live-player error:', e.detail.errMsg)
@@ -637,14 +709,12 @@
 		}
 	}
 	.show-input{
-		transform: translateY(-44rpx);
+		transform: translateY(-50rpx);
 	}
 	@keyframes showList {
 		0% {
 			height: 0rpx;
 		}
-
-		,
 		100% {
 			height: 800rpx;
 		}
@@ -654,8 +724,6 @@
 		0% {
 			height: 800rpx;
 		}
-
-		,
 		100% {
 			height: 0rpx;
 		}
@@ -759,7 +827,9 @@
 		// overflow-y: hidden;
 		font-size: 0;
 	}
-
+page{
+	height: 100%;
+}
 	.commentareawrap {
 		font-size: 32rpx;
 		width: 100%;
@@ -872,9 +942,9 @@
 
 	.roomright {
 		height: 100%;
-		width: 750rpx;
+		width: 100%;
 		// background: #f5f5f5;
-		background-color: #DF828C !important;
+		background-color: #000 !important;
 		position: relative;
 		font-size: 32rpx;
 		
@@ -885,7 +955,7 @@
 
 	live-player {
 		height: 100%;
-		width: 750rpx;
+		width: 100%;
 	}
 
 	.roomrttop {
@@ -1067,4 +1137,112 @@
 			font-size: 54rpx;
 		}
 	 }
+	@keyframes zq-animation1 {
+		0% {
+			margin-bottom:0;
+		}
+		100% {
+			margin-bottom:200px;
+		}
+	}
+	@keyframes zq-animation2 {
+		0% {
+			margin-bottom:0;
+		}
+		75%{
+			opacity:1;
+		}
+		100% {
+			margin-bottom:200px;
+			opacity:0;
+		}
+	}
+	@keyframes sq-animation1 {
+		0% {
+		}
+		25% {
+			margin-left:-8px;
+		}
+		50% {
+			margin-left:8px
+		}
+		75% {
+			margin-left:-15px
+		}
+		100% {
+			margin-left:15px
+		}
+	}
+	@keyframes sq-animation2 {
+		0% {
+		}
+		25% {
+			margin-left:-8px;
+		}
+		50% {
+			margin-left:8px
+		}
+		75% {
+			margin-left:-15px
+		}
+		100% {
+			margin-left:15px
+		}
+	}
+	@keyframes sq-animation1 {
+		0% {
+		}
+		25% {
+			margin-left:-8px;
+		}
+		50% {
+			margin-left:8px
+		}
+		75% {
+			margin-left:-15px
+		}
+		100% {
+			margin-left:15px
+		}
+	}
+	.bl1{
+		animation:bubble_big 0.5s linear 1 forwards;
+	}
+	@keyframes bubble_big_1 {
+		0% {
+			transform: scale(.3);
+		}
+		100% {
+			transform: scale(1);
+		}
+	}
+	.live-player{
+		width: 100%;
+		position: relative;
+		left: 0rpx;
+	}
+	.top0{
+		height: 100%;
+		top: 0px!important;
+	}
+	.top70{
+		height: 225px;
+		top: 70px!important;
+	}
+	.zq-small-bell{
+		image{
+			width: 26px;
+			height: 30px;
+			margin-left: 10px;
+		}
+	}
+	.transform-y{
+		opacity: 0;
+		transition: all 0.4s ease;
+		transform: translateY(-100px);
+	}
+	.as-me{
+		opacity: 1;
+		transform: translateY(0px);
+	}
 </style>

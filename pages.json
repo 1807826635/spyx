@@ -100,7 +100,7 @@
 			"path": "pages/order_details/index",
 			"style": {
 				"navigationBarTitleText": "订单详情",
-				"navigationBarBackgroundColor": "#4C56AA"
+				"navigationBarBackgroundColor": "#DF828C"
 				// #ifdef MP
 			,"navigationBarTextStyle": "#fff"
 				// #endif
@@ -186,7 +186,7 @@
 					"path": "user_spread_user/index",
 					"style": {
 						"navigationBarTitleText": "我的推广",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -202,7 +202,7 @@
 					"path": "user_spread_money/index",
 					"style": {
 						"navigationBarTitleText": "佣金记录",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -212,7 +212,7 @@
 					"path": "user_cash/index",
 					"style": {
 						"navigationBarTitleText": "提现",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -244,7 +244,7 @@
 					"path": "user_phone/index",
 					"style": {
 						"navigationBarTitleText": "绑定手机",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -260,7 +260,7 @@
 					"path": "user_pwd_edit/index",
 					"style": {
 						"navigationBarTitleText": "修改密码",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -282,7 +282,7 @@
 					"path": "promoter-list/index",
 					"style": {
 						"navigationBarTitleText": "推广人列表",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -292,7 +292,7 @@
 					"path": "promoter-order/index",
 					"style": {
 						"navigationBarTitleText": "推广人订单",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -302,7 +302,7 @@
 					"path": "promoter_rank/index",
 					"style": {
 						"navigationBarTitleText": "推广人排行",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -312,7 +312,7 @@
 					"path": "commission_rank/index",
 					"style": {
 						"navigationBarTitleText": "佣金排行",
-						"navigationBarBackgroundColor": "#4C56AA"
+						"navigationBarBackgroundColor": "#DF828C"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
 						// #endif
@@ -413,7 +413,7 @@
 						"navigationBarTitleText": "限时秒杀"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
-					,"navigationBarBackgroundColor":"#4C56AA"
+					,"navigationBarBackgroundColor":"#DF828C"
 						// #endif
 					}
 				},
@@ -432,7 +432,7 @@
 						"navigationBarTitleText": "砍价海报"
 						// #ifdef MP
 					,"navigationBarTextStyle": "#fff"
-					,"navigationBarBackgroundColor":"#4C56AA"
+					,"navigationBarBackgroundColor":"#DF828C"
 						// #endif
 					}
 				},

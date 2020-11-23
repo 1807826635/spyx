@@ -163,11 +163,11 @@ isrc:this.$config.imgsrc
 		padding: 0 10rpx;
 		box-sizing: border-box;
 		background: #f3f4ff;
-		border: 1px solid #4B56AA;
+		border: 1px solid #DF828C;
 		opacity: 1;
 		border-radius: 22rpx;
 		font-size: 20rpx;
-		color: #4B56AA;
+		color: #DF828C;
 		margin-right: 12rpx;
 	}
 </style>

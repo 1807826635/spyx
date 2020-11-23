@@ -12,7 +12,7 @@
 	        <view class='pages'>{{currents}}/{{imgUrls.length || 1}}</view>
 	    </view> -->
 	<view class='product-bg'>
-		<swiper :indicator-dots="indicatorDots" indicator-active-color="#4C56AA" :autoplay="autoplay" :circular="circular"
+		<swiper :indicator-dots="indicatorDots" indicator-active-color="#DF828C" :autoplay="autoplay" :circular="circular"
 		 :interval="interval" :duration="duration" @change="change">
 			<swiper-item v-if="videoline">
 				<view class="item">

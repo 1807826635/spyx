@@ -233,7 +233,7 @@
 	}
 
 	.bargain-record .item .bottom .success {
-		color: #4C56AA;
+		color: #DF828C;
 	}
 
 	.bargain-record .item .bottom .bnt {

@@ -250,15 +250,15 @@
 	}
 
 	.logistics .logisticsCon .item .circular.on {
-		background-color: #4C56AA;
+		background-color: #DF828C;
 	}
 
 	.logistics .logisticsCon .item .text.on-font {
-		color: #4C56AA;
+		color: #DF828C;
 	}
 
 	.logistics .logisticsCon .item .text .data.on-font {
-		color: #4C56AA;
+		color: #DF828C;
 	}
 
 	.logistics .logisticsCon .item .text {

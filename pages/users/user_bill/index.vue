@@ -161,7 +161,7 @@
 	}
 
 	.bill-details .nav .item.on {
-		color: #4C56AA;
-		border-bottom: 3rpx solid #4C56AA;
+		color: #DF828C;
+		border-bottom: 3rpx solid #DF828C;
 	}
 </style>
