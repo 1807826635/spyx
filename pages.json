@@ -182,16 +182,16 @@
 						"navigationBarTitleText": "我的优惠券"
 					}
 				},
-				{
-					"path": "user_spread_user/index",
-					"style": {
-						"navigationBarTitleText": "我的推广",
-						"navigationBarBackgroundColor": "#DF828C"
-						// #ifdef MP
-					,"navigationBarTextStyle": "#fff"
-						// #endif
-					}
-				},
+//				{
+//					"path": "user_spread_user/index",
+//					"style": {
+//						"navigationBarTitleText": "我的推广",
+//						"navigationBarBackgroundColor": "#DF828C"
+//						// #ifdef MP
+//					,"navigationBarTextStyle": "#fff"
+//						// #endif
+//					}
+//				},
 				{
 					"path": "user_spread_code/index",
 					"style": {

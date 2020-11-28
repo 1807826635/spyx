@@ -251,9 +251,9 @@
 	}
 
 	.product-window .productWinList .item .listn .itemn.on {
-		color: #4C56AA;
+		color: #DF828C;
 		background:#f3f4ff;
-		border-color: #4C56AA;
+		border-color: #DF828C;
 	}
 	
 	.product-window .productWinList .item .listn .itemn.limit {

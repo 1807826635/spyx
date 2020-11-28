@@ -73,7 +73,7 @@
 		border-radius: 50rpx;
 		opacity: 0;
 		height: 0;
-		color: #4C56AA;
+		color: #DF828C;
 		width: 0;
 	}
 
@@ -86,7 +86,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background: #4C56AA !important;
+		background: #DF828C !important;
 	}
 
 	.home .homeCon .iconfont {

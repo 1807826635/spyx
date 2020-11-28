@@ -231,7 +231,7 @@
 </template>
 <style scoped lang="scss">
 	.goodCall {
-		color: #4C56AA;
+		color: #DF828C;
 		text-align: center;
 		width: 100%;
 		height: 86rpx;
@@ -253,7 +253,7 @@
 			justify-content: center;
 			height: 86rpx;
 			font-size: 30rpx;
-			color: #4C56AA;
+			color: #DF828C;
 		}
 
 		/* #endif */
@@ -311,7 +311,7 @@
 	}
 
 	.order-details .nav .on {
-		color: #4C56AA;
+		color: #DF828C;
 	}
 
 	.order-details .nav .progress {

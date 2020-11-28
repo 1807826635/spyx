@@ -1348,7 +1348,7 @@
 
 	.product-con .footer .bnt .buy {
 		border-radius: 0 50rpx 50rpx 0;
-        background: linear-gradient(90deg, #5F51B3 0%, #DF828C 100%);
+        background: linear-gradient(90deg, #dfa9ac 0%, #DF828C 100%);
 	}
 
 	.product-con .store-info {
@@ -1432,7 +1432,7 @@
 	.product-con .superior .title .titleTxt {
 		margin: 0 20rpx;
 		font-size: 30rpx;
-		background-image: linear-gradient(to right, #5F51B2 0%, #4B56A9 100%);
+		background-image: linear-gradient(to right, #f39ca1 0%, #DF828C  100%);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 	}
@@ -1653,7 +1653,7 @@
 		height: 5rpx;
 		background-repeat: no-repeat;
 		content: "";
-		background-image: linear-gradient(to right, #5F51B2 0%, #4B56A9 100%);
+		background-image: linear-gradient(to right, #df867e 0%, #DF828C 100%);
 		bottom: -10rpx;
 		left: 50%;
 		margin-left: -28rpx;

@@ -796,7 +796,7 @@
 
 	.broadcast_details_pic {
 		font-size: 36rpx;
-		color: #4C56AA;
+		color: #DF828C;
 		text-align: left;
 	}
 

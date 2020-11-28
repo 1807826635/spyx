@@ -122,7 +122,7 @@
 		justify-content: center;
 	} 
 	.red{
-		color: #4C56AA;
+		color: #DF828C;
 		margin: 0 4rpx;
 	}
 </style>
