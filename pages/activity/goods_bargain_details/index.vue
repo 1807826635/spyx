@@ -659,10 +659,15 @@
 		 * 用户点击右上角分享
 		 */
 		onShareAppMessage: function() {
+      let suid
+      if(app.globalData.is-staff){
+        suid = app.globalData.is-id
+      }
+
 			let that = this,share = {
 				title: '您的好友' + that.userInfo.nickname + '邀请您帮他砍' + that.bargainInfo.title + ' 快去帮忙吧！',
 				path: '/pages/activity/goods_bargain_details/index?id=' + this.id + '&bargain=' + this.bargainUid +
-						'&spid=' + this.userInfo.uid,
+						'&spid=' + this.userInfo.uid+'&uid='+suid,
 				imageUrl: that.bargainInfo.image,
 			};
 			that.close();

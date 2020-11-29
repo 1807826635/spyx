@@ -205,10 +205,14 @@ export default {
 	onShareAppMessage: function() {
 		let that = this;
 		that.close();
+    let suid
+    if(app.globalData.is-staff){
+      suid = app.globalData.is-id
+    }
 		that.addShareBargain();
 		return {
 			title: '您的好友' + that.userInfo.nickname + '邀请您参团' + that.storeCombination.title,
-			path: app.globalData.openPages,
+			path: app.globalData.openPages+'&uid='+suid,
 			imageUrl: that.storeCombination.image
 		};
 	},

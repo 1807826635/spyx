@@ -15,10 +15,15 @@
 			isLogin:false,
 			userInfo:{},
 			MyMenus:[],
-			isIframe:false
+			isIframe:false,
+      uid:''
 		 },
 		onLaunch: function(option) {
 			let that = this;
+			if(option.query.uid){
+        that.globalData.uid = option.query.uid
+      }
+			console.log('获取到的路由参数',option.query)
 			// #ifdef MP
 			 if (HTTP_REQUEST_URL == ''){
 			      console.error("请配置根目录下的config.js文件中的 'HTTP_REQUEST_URL'\n\n请修改开发者工具中【详情】->【AppID】改为自己的Appid\n\n请前往后台【小程序】->【小程序配置】填写自己的 appId and AppSecret");

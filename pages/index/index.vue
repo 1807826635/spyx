@@ -5,6 +5,7 @@
 			<component :is="item.name" :index="index" :dataConfig="item" :activeName="activeName" :scrollTop="scrollTop" :pagePath="'/pages/index/index'"></component>
 		</view>
 		<!-- #endif -->
+		<view @click="logouts">退出</view>
 		<!-- #ifdef MP -->
 		<block v-for="(item,index) in styleConfig" :key='index'>
 			<b_swiperBg v-if='item.name=="b_swiperBg"' :dataConfig="item"></b_swiperBg>
@@ -31,7 +32,7 @@
 	import {getShare} from '@/api/public.js';
 	// #endif
 	import {
-		getDiy
+		getDiy,logout
 	} from '@/api/api.js';
 	export default {
 		components: {
@@ -88,6 +89,9 @@
 		onShow() {},
 		mounted() {},
 		methods: {
+      logouts(){
+        logout()
+			},
 			// 对象转数组
 			objToArr(data) {
 				let obj = Object.keys(data);

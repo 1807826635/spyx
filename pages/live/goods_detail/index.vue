@@ -407,12 +407,16 @@
 		// #ifdef MP
 		onShareAppMessage: function() {
 			let that = this;
+      let suid
+      if(app.globalData.is-staff){
+        suid = app.globalData.is-id
+      }
 			that.$set(that, 'actionSheetHidden', !that.actionSheetHidden);
 			userShare();
 			return {
 				title: that.storeInfo.store_name || '',
 				imageUrl: that.storeInfo.image || '',
-				path: '/pages/goods_details/index?id=' + that.id + '&spid=' + that.uid,
+				path: '/pages/goods_details/index?id=' + that.id + '&spid=' + that.uid+'&uid='+suid,
 			}
 		},
 		// #endif

@@ -48,6 +48,7 @@
 	import authorize from '@/components/Authorize';
 	// #endif
 	import home from '@/components/home';
+  let app = getApp();
 	export default {
 		components: {
 			// #ifdef MP
@@ -103,10 +104,14 @@
 		// #ifdef MP
 		onShareAppMessage: function() {
 			userShare();
+      let suid
+      if(app.globalData.is-staff){
+        suid = app.globalData.is-id
+      }
 			return {
 				title: this.userInfo.nickname + '-分销海报',
 				imageUrl: this.spreadList[0],
-				path: '/pages/index/index?spid=' + this.userInfo.uid,
+				path: '/pages/index/index?spid=' + this.userInfo.uid+'&uid='+suid,
 			};
 		},
 		// #endif
